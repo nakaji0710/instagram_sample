@@ -10,8 +10,18 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    redirect_to root_path and return unless @user.activated?
+    if params[:q] && params[:q].reject { |key, value| value.blank? }.present?
+      @q = @user.microposts.ransack(microposts_search_params)
+      @microposts = @q.result.paginate(page: params[:page])
+    else
+      @q = Micropost.none.ransack
+      @microposts = @user.microposts.paginate(page: params[:page])
+    end
+    @url = user_path(@user)
   end
+  
+  
   
   def new
     @user = User.new
@@ -22,7 +32,7 @@ class UsersController < ApplicationController
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
-      redirect_to root_url
+      redirect_to @user
     else
       render 'new'
     end
