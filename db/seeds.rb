@@ -7,7 +7,8 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now,
              profile: "I like black cat.",
-             username: example_user)
+             username: "example100",
+             gender: "men")
 
 99.times do |n|
   name  = Faker::Name.name
@@ -21,7 +22,8 @@ User.create!(name:  "Example User",
                activated: true,
                activated_at: Time.zone.now,
                profile: profile,
-               username: user_id)
+               username: "user_id",
+               gender: "men")
 end
 
 # マイクロポスト

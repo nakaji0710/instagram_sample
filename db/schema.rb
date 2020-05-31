@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200531065351) do
+ActiveRecord::Schema.define(version: 20200531123517) do
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 20200531065351) do
     t.text "profile"
     t.string "website"
     t.string "username"
+    t.string "gender"
+    t.string "callnumber"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["profile"], name: "index_users_on_profile"
     t.index ["username"], name: "index_users_on_username"
