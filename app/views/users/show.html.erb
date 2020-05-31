@@ -1,28 +1,45 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <%= render 'follow_form' if logged_in? %>
-    <% if @user.microposts.any? %>
-      <div class="row">
-      <div class="col-md-4">
-        <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      </div>
-      <div class="search_form">
+  <aside class="vtbgv">
+    
+    <div class="search_form">
         <%= render 'shared/microposts_search_form' %>
       </div>
-    </div>
+    
+    <section class="user_info">
       
+        <%= gravatar_for @user %>
+       
+    </section>
+    
+    
+    <section class="stats_show">
+      
+      <div class="nZSzR">
+        <div class="_7UhW9">
+          <%= @user.name %>
+        </div>
+        <div class="L3NKy">
+          <%= link_to "プロフィールを編集", edit_user_path(current_user.id), class: "_4pI4F" %>
+        </div>
+      </div>
+      
+      <div class="k9GMp">
+        <%= render 'shared/stats' %>
+      </div>
+      
+      <div class="-vDIg">
+        中島僚太（修正あり）
+      </div>
+      
+    </section>
+    
+    
+    
+  </aside>
+  <div class="_2z6nI">
+    <%= render 'follow_form' if logged_in? %>
+    <% if @user.microposts.any? %>
       
       <ol class="microposts">
         <%= render @microposts %>

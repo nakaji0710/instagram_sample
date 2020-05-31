@@ -22,18 +22,13 @@
     </div>
   </div>
 <% else %>
-  <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
-
-    <h2>
-      This is the home page for the
-      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <div class="_4_yKc">
+    <div class="home-iphone">
+      <div class="V64Sp">
+        <%= image_tag("d6bf0c928b5a.jpg",
+        alt: "アプリストアでダウンロード",class: "RP4i1") %>
+      </div>
+    </div>
+    <%= render 'static_pages/form' %>
   </div>
-
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-              'http://rubyonrails.org/' %>
 <% end %>

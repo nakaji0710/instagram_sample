@@ -1,0 +1,66 @@
+<div class="rgFsT">
+  <div class="gr27e">
+    <h1 class="NXVPg Szr5J coreSpriteLoggedOutWordmark">Instagram</h1>
+    <div class="EPjEi">
+      <div class="Igw0E  IwRSH  eGOV_  _4EzTm  FBi-h"></div>
+        <%= form_for(:session, url: login_path) do |f| %>
+          <div class="-MzZI">
+            <div class="_9GP1n   ">
+              <label class="f0n8F ">
+                <span class="_9nyy2">メールアドレス</span>
+                <%= f.email_field :email, class: '_2hvTZ pexuQ zyHYP' %>
+              </label>
+              <div class="i24fI"></div>
+            </div>
+          </div>
+          <div class="-MzZI">
+            <div class="_9GP1n">
+              <label class="f0n8F">
+                <span class="_9nyy2">パスワード</span>
+                <%= f.password_field :password, class: '_2hvTZ pexuQ zyHYP' %>
+              </label>
+              <div class="i24fI"></div>
+            </div>
+          </div>
+          <div class="Igw0E">
+            <%= f.submit "Log in", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+        <div class="K-1uj">
+          <div class="s311c"></div>
+          <div class="_0tv-g">または</div>
+          <div class="s311c"></div>
+        </div>
+        <div class="IwRSC">
+          <button class="yWX7d" type="button">
+            <span class="coreSpriteFacebookIcon AeB99"></span>
+            <span class="KPnG0">Facebookでログイン</span>
+          </button>
+        </div>
+        <a class="_2Lks6" href="/accounts/password/reset/">
+          パスワードを忘れた場合
+        </a>
+    </div>
+  </div>
+  <div class="gr27e">
+    <div class="_7UhW9 xLCgt yUEEX _0PwGv uL8Hv">
+      <p class="izU2O ">
+        アカウントをお持ちでないですか？
+        <%= link_to "登録する", signup_path %>
+      </p>
+    </div>
+  </div>
+  <div class="APQi1">
+    <p class="b_nGN">ダウンロード</p>
+    <div class="iNy2T">
+      <%= link_to image_tag("f098850459c9.png", alt: "アプリストアでダウンロード",class: "Rt8TI"),
+            'https://itunes.apple.com/app/instagram/id389801252?'  %>
+      <%= link_to image_tag("8ce59d2c3625.png", alt: "Google Playでダウンロード",class: "Rt8TI"),
+            'https://play.google.com/store/apps/details?id=com.instagram.
+            android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%
+            26ig_mid%3D9CAF44D0-FF7D-4651-9ADE-209FEC6EFE26%26utm_content%3Dlo%
+            26utm_medium%3Dbadge',{class: "Rt8TI"} %>
+    </div>
+  </div>
+</div>
+
